@@ -17,7 +17,7 @@ if uploaded_file is not None:
     image_np = np.array(image)
     mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=image_np)
 
-    base_options = python.BaseOptions(model_asset_path="deeplabv3.tflite")
+    base_options = python.BaseOptions(model_asset_path="deeplab_v3.tflite")
     options = vision.ImageSegmenterOptions(base_options=base_options, output_category_mask=True)
     segmenter = vision.ImageSegmenter.create_from_options(options)
 
